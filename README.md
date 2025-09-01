@@ -129,5 +129,12 @@ sns.heatmap(corr1,annot=True)
 ```
 <img width="673" height="561" alt="image" src="https://github.com/user-attachments/assets/d7fc65b2-7a5e-4f1a-ab9c-d81df0176d6a" />
 
+```
+group = df.groupby(['Pclass','Survived'])
+pclass_survived = group.size().unstack()
+sns.heatmap(pclass_survived,annot = True,fmt="d")
+```
+<img width="680" height="577" alt="image" src="https://github.com/user-attachments/assets/cb07b364-b7c8-4fc2-9027-1b84da243be6" />
+
 # RESULT
 Thus exploratory data analysis on the given data set has been executed successfully.
